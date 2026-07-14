@@ -38,8 +38,8 @@ export function useLiveStats() {
   const [loading, setLoading] = useState(true);
 
   const refetch = async () => {
-    const { data, error } = await supabase
-      .from("engagements")
+    const { data, error } = await (supabase as any)
+      .from("engagements_public")
       .select("id, first_name, region, fruits, valeurs, paix_actions, gender, testimony, created_at")
       .order("created_at", { ascending: false });
 
@@ -73,7 +73,7 @@ export function useLiveStats() {
       fruitBreakdown,
       regionBreakdown,
       genderBreakdown,
-      latest: data.slice(0, 6).map((r) => ({
+      latest: data.slice(0, 6).map((r: any) => ({
         id: r.id,
         first_name: r.first_name,
         region: r.region,
