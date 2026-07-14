@@ -38,8 +38,8 @@ export function useLiveStats() {
   const [loading, setLoading] = useState(true);
 
   const refetch = async () => {
-    const { data, error } = await supabase
-      .from("engagements")
+    const { data, error } = await (supabase as any)
+      .from("engagements_public")
       .select("id, first_name, region, fruits, valeurs, paix_actions, gender, testimony, created_at")
       .order("created_at", { ascending: false });
 
