@@ -9,8 +9,26 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TableauDeBordRouteImport } from './routes/tableau-de-bord'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as EngagementRouteImport } from './routes/engagement'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TableauDeBordRoute = TableauDeBordRouteImport.update({
+  id: '/tableau-de-bord',
+  path: '/tableau-de-bord',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EngagementRoute = EngagementRouteImport.update({
+  id: '/engagement',
+  path: '/engagement',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +37,61 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/engagement': typeof EngagementRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/tableau-de-bord': typeof TableauDeBordRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/engagement': typeof EngagementRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/tableau-de-bord': typeof TableauDeBordRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/engagement': typeof EngagementRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/tableau-de-bord': typeof TableauDeBordRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/engagement' | '/sitemap.xml' | '/tableau-de-bord'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/engagement' | '/sitemap.xml' | '/tableau-de-bord'
+  id: '__root__' | '/' | '/engagement' | '/sitemap.xml' | '/tableau-de-bord'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  EngagementRoute: typeof EngagementRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TableauDeBordRoute: typeof TableauDeBordRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tableau-de-bord': {
+      id: '/tableau-de-bord'
+      path: '/tableau-de-bord'
+      fullPath: '/tableau-de-bord'
+      preLoaderRoute: typeof TableauDeBordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/engagement': {
+      id: '/engagement'
+      path: '/engagement'
+      fullPath: '/engagement'
+      preLoaderRoute: typeof EngagementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +104,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  EngagementRoute: EngagementRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TableauDeBordRoute: TableauDeBordRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
