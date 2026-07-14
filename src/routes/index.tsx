@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "L'Arbre de la Paix — Faites grandir la paix au Niger" },
       {
         property: "og:description",
-        content: "Chaque promesse citoyenne fait apparaître une nouvelle feuille sur l'Arbre de la Paix.",
+        content: "Une plateforme citoyenne nigérienne où chaque engagement pour la paix, le civisme et la solidarité fait grandir un arbre commun en temps réel.",
       },
     ],
   }),
