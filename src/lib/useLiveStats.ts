@@ -73,7 +73,7 @@ export function useLiveStats() {
       fruitBreakdown,
       regionBreakdown,
       genderBreakdown,
-      latest: data.slice(0, 6).map((r) => ({
+      latest: data.slice(0, 6).map((r: any) => ({
         id: r.id,
         first_name: r.first_name,
         region: r.region,
