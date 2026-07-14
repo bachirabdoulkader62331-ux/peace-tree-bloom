@@ -14,7 +14,84 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      engagements: {
+        Row: {
+          age_range: string | null
+          benevolat: boolean | null
+          city: string | null
+          civisme_biens: boolean | null
+          civisme_haine: boolean | null
+          civisme_lois: boolean | null
+          created_at: string
+          email: string | null
+          first_name: string
+          fruits: string[] | null
+          gender: string | null
+          id: string
+          last_name: string
+          membre_association: boolean | null
+          paix_actions: string[] | null
+          paix_indispensable: boolean | null
+          phone: string | null
+          quartier: string | null
+          quartier_participation: boolean | null
+          region: string
+          signed: boolean
+          testimony: string | null
+          valeurs: string[] | null
+        }
+        Insert: {
+          age_range?: string | null
+          benevolat?: boolean | null
+          city?: string | null
+          civisme_biens?: boolean | null
+          civisme_haine?: boolean | null
+          civisme_lois?: boolean | null
+          created_at?: string
+          email?: string | null
+          first_name: string
+          fruits?: string[] | null
+          gender?: string | null
+          id?: string
+          last_name: string
+          membre_association?: boolean | null
+          paix_actions?: string[] | null
+          paix_indispensable?: boolean | null
+          phone?: string | null
+          quartier?: string | null
+          quartier_participation?: boolean | null
+          region: string
+          signed?: boolean
+          testimony?: string | null
+          valeurs?: string[] | null
+        }
+        Update: {
+          age_range?: string | null
+          benevolat?: boolean | null
+          city?: string | null
+          civisme_biens?: boolean | null
+          civisme_haine?: boolean | null
+          civisme_lois?: boolean | null
+          created_at?: string
+          email?: string | null
+          first_name?: string
+          fruits?: string[] | null
+          gender?: string | null
+          id?: string
+          last_name?: string
+          membre_association?: boolean | null
+          paix_actions?: string[] | null
+          paix_indispensable?: boolean | null
+          phone?: string | null
+          quartier?: string | null
+          quartier_participation?: boolean | null
+          region?: string
+          signed?: boolean
+          testimony?: string | null
+          valeurs?: string[] | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
