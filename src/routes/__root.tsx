@@ -75,33 +75,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "L'Arbre de la Paix — Faites grandir la paix au Niger" },
+      { title: "Association des Innovateurs pour la Paix" },
       {
         name: "description",
         content:
-          "Une plateforme citoyenne nigérienne où chaque engagement pour la paix, le civisme et la solidarité fait grandir un arbre commun en temps réel.",
+          "Consolidation de la paix et promotion des droits humains à l'ère du numérique au Niger et au Sahel.",
       },
       { name: "author", content: "Association des Innovateurs pour la Paix" },
-      { property: "og:title", content: "L'Arbre de la Paix — Faites grandir la paix au Niger" },
-      {
-        property: "og:description",
-        content:
-          "Une plateforme citoyenne nigérienne où chaque engagement pour la paix, le civisme et la solidarité fait grandir un arbre commun en temps réel.",
-      },
+      { property: "og:site_name", content: "Association des Innovateurs pour la Paix" },
       { property: "og:type", content: "website" },
-      { property: "og:locale", content: "fr_FR" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "L'Arbre de la Paix — Faites grandir la paix au Niger" },
-      {
-        name: "twitter:description",
-        content: "Une plateforme citoyenne nigérienne où chaque engagement pour la paix, le civisme et la solidarité fait grandir un arbre commun en temps réel.",
-      },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/86abd42c-675e-4856-b407-b001464e3bc4/id-preview-398ed280--b42ae7cb-e744-4792-8b3d-5caf241390ca.lovable.app-1784045665470.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/86abd42c-675e-4856-b407-b001464e3bc4/id-preview-398ed280--b42ae7cb-e744-4792-8b3d-5caf241390ca.lovable.app-1784045665470.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

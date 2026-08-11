@@ -15,6 +15,8 @@ import { Route as ProjetsRouteImport } from './routes/projets'
 import { Route as GalerieRouteImport } from './routes/galerie'
 import { Route as EvenementsRouteImport } from './routes/evenements'
 import { Route as EngagementRouteImport } from './routes/engagement'
+import { Route as DevenirPartenaireRouteImport } from './routes/devenir-partenaire'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ArbreDeLaPaixRouteImport } from './routes/arbre-de-la-paix'
 import { Route as AlummaGindaRouteImport } from './routes/alumma-ginda'
 import { Route as ActualitesRouteImport } from './routes/actualites'
@@ -51,6 +53,16 @@ const EngagementRoute = EngagementRouteImport.update({
   path: '/engagement',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DevenirPartenaireRoute = DevenirPartenaireRouteImport.update({
+  id: '/devenir-partenaire',
+  path: '/devenir-partenaire',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ArbreDeLaPaixRoute = ArbreDeLaPaixRouteImport.update({
   id: '/arbre-de-la-paix',
   path: '/arbre-de-la-paix',
@@ -83,6 +95,8 @@ export interface FileRoutesByFullPath {
   '/actualites': typeof ActualitesRoute
   '/alumma-ginda': typeof AlummaGindaRoute
   '/arbre-de-la-paix': typeof ArbreDeLaPaixRoute
+  '/contact': typeof ContactRoute
+  '/devenir-partenaire': typeof DevenirPartenaireRoute
   '/engagement': typeof EngagementRoute
   '/evenements': typeof EvenementsRoute
   '/galerie': typeof GalerieRoute
@@ -96,6 +110,8 @@ export interface FileRoutesByTo {
   '/actualites': typeof ActualitesRoute
   '/alumma-ginda': typeof AlummaGindaRoute
   '/arbre-de-la-paix': typeof ArbreDeLaPaixRoute
+  '/contact': typeof ContactRoute
+  '/devenir-partenaire': typeof DevenirPartenaireRoute
   '/engagement': typeof EngagementRoute
   '/evenements': typeof EvenementsRoute
   '/galerie': typeof GalerieRoute
@@ -110,6 +126,8 @@ export interface FileRoutesById {
   '/actualites': typeof ActualitesRoute
   '/alumma-ginda': typeof AlummaGindaRoute
   '/arbre-de-la-paix': typeof ArbreDeLaPaixRoute
+  '/contact': typeof ContactRoute
+  '/devenir-partenaire': typeof DevenirPartenaireRoute
   '/engagement': typeof EngagementRoute
   '/evenements': typeof EvenementsRoute
   '/galerie': typeof GalerieRoute
@@ -125,6 +143,8 @@ export interface FileRouteTypes {
     | '/actualites'
     | '/alumma-ginda'
     | '/arbre-de-la-paix'
+    | '/contact'
+    | '/devenir-partenaire'
     | '/engagement'
     | '/evenements'
     | '/galerie'
@@ -138,6 +158,8 @@ export interface FileRouteTypes {
     | '/actualites'
     | '/alumma-ginda'
     | '/arbre-de-la-paix'
+    | '/contact'
+    | '/devenir-partenaire'
     | '/engagement'
     | '/evenements'
     | '/galerie'
@@ -151,6 +173,8 @@ export interface FileRouteTypes {
     | '/actualites'
     | '/alumma-ginda'
     | '/arbre-de-la-paix'
+    | '/contact'
+    | '/devenir-partenaire'
     | '/engagement'
     | '/evenements'
     | '/galerie'
@@ -165,6 +189,8 @@ export interface RootRouteChildren {
   ActualitesRoute: typeof ActualitesRoute
   AlummaGindaRoute: typeof AlummaGindaRoute
   ArbreDeLaPaixRoute: typeof ArbreDeLaPaixRoute
+  ContactRoute: typeof ContactRoute
+  DevenirPartenaireRoute: typeof DevenirPartenaireRoute
   EngagementRoute: typeof EngagementRoute
   EvenementsRoute: typeof EvenementsRoute
   GalerieRoute: typeof GalerieRoute
@@ -217,6 +243,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EngagementRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/devenir-partenaire': {
+      id: '/devenir-partenaire'
+      path: '/devenir-partenaire'
+      fullPath: '/devenir-partenaire'
+      preLoaderRoute: typeof DevenirPartenaireRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/arbre-de-la-paix': {
       id: '/arbre-de-la-paix'
       path: '/arbre-de-la-paix'
@@ -261,6 +301,8 @@ const rootRouteChildren: RootRouteChildren = {
   ActualitesRoute: ActualitesRoute,
   AlummaGindaRoute: AlummaGindaRoute,
   ArbreDeLaPaixRoute: ArbreDeLaPaixRoute,
+  ContactRoute: ContactRoute,
+  DevenirPartenaireRoute: DevenirPartenaireRoute,
   EngagementRoute: EngagementRoute,
   EvenementsRoute: EvenementsRoute,
   GalerieRoute: GalerieRoute,
