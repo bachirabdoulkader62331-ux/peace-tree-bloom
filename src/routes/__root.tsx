@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { I18nProvider } from "../lib/i18n";
 import { Toaster } from "@/components/ui/sonner";
+import { AlummaGindaAI } from "@/components/ai/AlummaGindaAI";
 
 function NotFoundComponent() {
   return (
@@ -126,6 +127,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <I18nProvider>
         <Outlet />
+        <AlummaGindaAI />
         <Toaster position="top-center" richColors />
       </I18nProvider>
     </QueryClientProvider>
