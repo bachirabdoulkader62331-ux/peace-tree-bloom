@@ -12,9 +12,12 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TableauDeBordRouteImport } from './routes/tableau-de-bord'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ProjetsRouteImport } from './routes/projets'
+import { Route as GalerieRouteImport } from './routes/galerie'
+import { Route as EvenementsRouteImport } from './routes/evenements'
 import { Route as EngagementRouteImport } from './routes/engagement'
 import { Route as ArbreDeLaPaixRouteImport } from './routes/arbre-de-la-paix'
 import { Route as AlummaGindaRouteImport } from './routes/alumma-ginda'
+import { Route as ActualitesRouteImport } from './routes/actualites'
 import { Route as AProposRouteImport } from './routes/a-propos'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -33,6 +36,16 @@ const ProjetsRoute = ProjetsRouteImport.update({
   path: '/projets',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GalerieRoute = GalerieRouteImport.update({
+  id: '/galerie',
+  path: '/galerie',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EvenementsRoute = EvenementsRouteImport.update({
+  id: '/evenements',
+  path: '/evenements',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EngagementRoute = EngagementRouteImport.update({
   id: '/engagement',
   path: '/engagement',
@@ -46,6 +59,11 @@ const ArbreDeLaPaixRoute = ArbreDeLaPaixRouteImport.update({
 const AlummaGindaRoute = AlummaGindaRouteImport.update({
   id: '/alumma-ginda',
   path: '/alumma-ginda',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ActualitesRoute = ActualitesRouteImport.update({
+  id: '/actualites',
+  path: '/actualites',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AProposRoute = AProposRouteImport.update({
@@ -62,9 +80,12 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/actualites': typeof ActualitesRoute
   '/alumma-ginda': typeof AlummaGindaRoute
   '/arbre-de-la-paix': typeof ArbreDeLaPaixRoute
   '/engagement': typeof EngagementRoute
+  '/evenements': typeof EvenementsRoute
+  '/galerie': typeof GalerieRoute
   '/projets': typeof ProjetsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tableau-de-bord': typeof TableauDeBordRoute
@@ -72,9 +93,12 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/actualites': typeof ActualitesRoute
   '/alumma-ginda': typeof AlummaGindaRoute
   '/arbre-de-la-paix': typeof ArbreDeLaPaixRoute
   '/engagement': typeof EngagementRoute
+  '/evenements': typeof EvenementsRoute
+  '/galerie': typeof GalerieRoute
   '/projets': typeof ProjetsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tableau-de-bord': typeof TableauDeBordRoute
@@ -83,9 +107,12 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/actualites': typeof ActualitesRoute
   '/alumma-ginda': typeof AlummaGindaRoute
   '/arbre-de-la-paix': typeof ArbreDeLaPaixRoute
   '/engagement': typeof EngagementRoute
+  '/evenements': typeof EvenementsRoute
+  '/galerie': typeof GalerieRoute
   '/projets': typeof ProjetsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tableau-de-bord': typeof TableauDeBordRoute
@@ -95,9 +122,12 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/a-propos'
+    | '/actualites'
     | '/alumma-ginda'
     | '/arbre-de-la-paix'
     | '/engagement'
+    | '/evenements'
+    | '/galerie'
     | '/projets'
     | '/sitemap.xml'
     | '/tableau-de-bord'
@@ -105,9 +135,12 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/a-propos'
+    | '/actualites'
     | '/alumma-ginda'
     | '/arbre-de-la-paix'
     | '/engagement'
+    | '/evenements'
+    | '/galerie'
     | '/projets'
     | '/sitemap.xml'
     | '/tableau-de-bord'
@@ -115,9 +148,12 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/a-propos'
+    | '/actualites'
     | '/alumma-ginda'
     | '/arbre-de-la-paix'
     | '/engagement'
+    | '/evenements'
+    | '/galerie'
     | '/projets'
     | '/sitemap.xml'
     | '/tableau-de-bord'
@@ -126,9 +162,12 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AProposRoute: typeof AProposRoute
+  ActualitesRoute: typeof ActualitesRoute
   AlummaGindaRoute: typeof AlummaGindaRoute
   ArbreDeLaPaixRoute: typeof ArbreDeLaPaixRoute
   EngagementRoute: typeof EngagementRoute
+  EvenementsRoute: typeof EvenementsRoute
+  GalerieRoute: typeof GalerieRoute
   ProjetsRoute: typeof ProjetsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TableauDeBordRoute: typeof TableauDeBordRoute
@@ -157,6 +196,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjetsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/galerie': {
+      id: '/galerie'
+      path: '/galerie'
+      fullPath: '/galerie'
+      preLoaderRoute: typeof GalerieRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/evenements': {
+      id: '/evenements'
+      path: '/evenements'
+      fullPath: '/evenements'
+      preLoaderRoute: typeof EvenementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/engagement': {
       id: '/engagement'
       path: '/engagement'
@@ -176,6 +229,13 @@ declare module '@tanstack/react-router' {
       path: '/alumma-ginda'
       fullPath: '/alumma-ginda'
       preLoaderRoute: typeof AlummaGindaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/actualites': {
+      id: '/actualites'
+      path: '/actualites'
+      fullPath: '/actualites'
+      preLoaderRoute: typeof ActualitesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/a-propos': {
@@ -198,9 +258,12 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AProposRoute: AProposRoute,
+  ActualitesRoute: ActualitesRoute,
   AlummaGindaRoute: AlummaGindaRoute,
   ArbreDeLaPaixRoute: ArbreDeLaPaixRoute,
   EngagementRoute: EngagementRoute,
+  EvenementsRoute: EvenementsRoute,
+  GalerieRoute: GalerieRoute,
   ProjetsRoute: ProjetsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TableauDeBordRoute: TableauDeBordRoute,
