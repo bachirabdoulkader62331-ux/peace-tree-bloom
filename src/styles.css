@@ -62,7 +62,6 @@
   /* Brand — aligné sur le bleu du logo AIP (#21489B) */
   --forest: oklch(0.34 0.13 264);   /* bleu profond */
   --moss:   oklch(0.43 0.15 265);   /* bleu logo */
-  --moss:   oklch(0.43 0.15 265);
   --leaf:   oklch(0.62 0.14 250);   /* bleu clair d'accent */
   --sprout: oklch(0.86 0.07 240);   /* bleu très clair */
   --kraft:  oklch(0.985 0.006 250); /* blanc bleuté */
