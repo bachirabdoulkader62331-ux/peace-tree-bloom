@@ -150,3 +150,19 @@
 
 @utility animate-fruit-pop { animation: fruit-pop 0.7s cubic-bezier(0.19,1,0.22,1) both; }
 @utility animate-leaf-drift { animation: leaf-drift 6s ease-in-out infinite; }
+
+@keyframes ken-burns {
+  0% { transform: scale(1.04) translate3d(0, 0, 0); }
+  100% { transform: scale(1.16) translate3d(-1.2%, -1%, 0); }
+}
+@keyframes hero-in {
+  0% { opacity: 0; transform: translateY(18px); filter: blur(4px); }
+  100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+@utility animate-ken-burns { animation: ken-burns 9s ease-out both; }
+@utility animate-hero-in { animation: hero-in 0.9s cubic-bezier(0.16,1,0.3,1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ken-burns, .animate-hero-in { animation: none !important; }
+}
