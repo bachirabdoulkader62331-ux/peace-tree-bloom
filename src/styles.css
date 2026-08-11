@@ -100,16 +100,16 @@
 .dark {
   --background: var(--forest);
   --foreground: var(--kraft);
-  --card: oklch(0.28 0.04 148);
+  --card: oklch(0.28 0.09 264);
   --card-foreground: var(--kraft);
-  --popover: oklch(0.28 0.04 148);
+  --popover: oklch(0.28 0.09 264);
   --popover-foreground: var(--kraft);
   --primary: var(--sprout);
   --primary-foreground: var(--forest);
-  --secondary: oklch(0.36 0.04 148);
+  --secondary: oklch(0.36 0.09 264);
   --secondary-foreground: var(--kraft);
-  --muted: oklch(0.36 0.04 148);
-  --muted-foreground: oklch(0.75 0.04 140);
+  --muted: oklch(0.36 0.09 264);
+  --muted-foreground: oklch(0.78 0.05 245);
   --accent: var(--leaf);
   --accent-foreground: var(--kraft);
   --border: oklch(1 0 0 / 10%);
