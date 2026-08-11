@@ -13,6 +13,8 @@ import { Route as TableauDeBordRouteImport } from './routes/tableau-de-bord'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ProjetsRouteImport } from './routes/projets'
 import { Route as EngagementRouteImport } from './routes/engagement'
+import { Route as ArbreDeLaPaixRouteImport } from './routes/arbre-de-la-paix'
+import { Route as AlummaGindaRouteImport } from './routes/alumma-ginda'
 import { Route as AProposRouteImport } from './routes/a-propos'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -36,6 +38,16 @@ const EngagementRoute = EngagementRouteImport.update({
   path: '/engagement',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArbreDeLaPaixRoute = ArbreDeLaPaixRouteImport.update({
+  id: '/arbre-de-la-paix',
+  path: '/arbre-de-la-paix',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AlummaGindaRoute = AlummaGindaRouteImport.update({
+  id: '/alumma-ginda',
+  path: '/alumma-ginda',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AProposRoute = AProposRouteImport.update({
   id: '/a-propos',
   path: '/a-propos',
@@ -50,6 +62,8 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/alumma-ginda': typeof AlummaGindaRoute
+  '/arbre-de-la-paix': typeof ArbreDeLaPaixRoute
   '/engagement': typeof EngagementRoute
   '/projets': typeof ProjetsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -58,6 +72,8 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/alumma-ginda': typeof AlummaGindaRoute
+  '/arbre-de-la-paix': typeof ArbreDeLaPaixRoute
   '/engagement': typeof EngagementRoute
   '/projets': typeof ProjetsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -67,6 +83,8 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/alumma-ginda': typeof AlummaGindaRoute
+  '/arbre-de-la-paix': typeof ArbreDeLaPaixRoute
   '/engagement': typeof EngagementRoute
   '/projets': typeof ProjetsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -77,6 +95,8 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/a-propos'
+    | '/alumma-ginda'
+    | '/arbre-de-la-paix'
     | '/engagement'
     | '/projets'
     | '/sitemap.xml'
@@ -85,6 +105,8 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/a-propos'
+    | '/alumma-ginda'
+    | '/arbre-de-la-paix'
     | '/engagement'
     | '/projets'
     | '/sitemap.xml'
@@ -93,6 +115,8 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/a-propos'
+    | '/alumma-ginda'
+    | '/arbre-de-la-paix'
     | '/engagement'
     | '/projets'
     | '/sitemap.xml'
@@ -102,6 +126,8 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AProposRoute: typeof AProposRoute
+  AlummaGindaRoute: typeof AlummaGindaRoute
+  ArbreDeLaPaixRoute: typeof ArbreDeLaPaixRoute
   EngagementRoute: typeof EngagementRoute
   ProjetsRoute: typeof ProjetsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -138,6 +164,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EngagementRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/arbre-de-la-paix': {
+      id: '/arbre-de-la-paix'
+      path: '/arbre-de-la-paix'
+      fullPath: '/arbre-de-la-paix'
+      preLoaderRoute: typeof ArbreDeLaPaixRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/alumma-ginda': {
+      id: '/alumma-ginda'
+      path: '/alumma-ginda'
+      fullPath: '/alumma-ginda'
+      preLoaderRoute: typeof AlummaGindaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/a-propos': {
       id: '/a-propos'
       path: '/a-propos'
@@ -158,6 +198,8 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AProposRoute: AProposRoute,
+  AlummaGindaRoute: AlummaGindaRoute,
+  ArbreDeLaPaixRoute: ArbreDeLaPaixRoute,
   EngagementRoute: EngagementRoute,
   ProjetsRoute: ProjetsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
