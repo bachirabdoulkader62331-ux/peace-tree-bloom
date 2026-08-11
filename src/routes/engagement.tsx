@@ -2,7 +2,6 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
-import { Toaster } from "sonner";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { supabase } from "@/integrations/supabase/client";
@@ -163,7 +162,6 @@ function EngagementPage() {
     return (
       <div className="min-h-screen bg-kraft">
         <SiteNav />
-        <Toaster position="top-center" />
         <main className="mx-auto max-w-3xl px-6 py-24 text-center">
           <div className="mb-8 inline-flex rounded-full bg-leaf/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-leaf">
             Engagement enregistré
@@ -216,7 +214,6 @@ function EngagementPage() {
   return (
     <div className="min-h-screen bg-kraft">
       <SiteNav />
-      <Toaster position="top-center" />
       <main className="mx-auto max-w-3xl px-6 py-12 lg:py-16">
         <div className="mb-10">
           <div className="mb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-leaf">

@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { PageShell, PageHero, Section } from "@/components/PageShell";
+import { PageShell, Section } from "@/components/PageShell";
 import { useI18n } from "@/lib/i18n";
 import { useLiveStats } from "@/lib/useLiveStats";
 import { FRUITS } from "@/lib/fruits";
