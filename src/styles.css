@@ -59,13 +59,13 @@
 :root {
   --radius: 0.75rem;
 
-  /* Brand */
-  --forest: oklch(0.32 0.05 148);   /* #1a3c2a */
-  --moss:   oklch(0.42 0.06 148);   /* #2d5a3d */
-  --leaf:   oklch(0.60 0.09 145);   /* #5a8a5c */
-  --sprout: oklch(0.79 0.08 140);   /* #a0c49d */
-  --kraft:  oklch(0.985 0.012 85);  /* #fdfaf6 */
-  --ink:    oklch(0.20 0.005 150);  /* #1e211f */
+  /* Brand — aligné sur le bleu du logo AIP (#21489B) */
+  --forest: oklch(0.34 0.13 264);   /* bleu profond */
+  --moss:   oklch(0.43 0.15 265);   /* bleu logo */
+  --leaf:   oklch(0.62 0.14 250);   /* bleu clair d'accent */
+  --sprout: oklch(0.86 0.07 240);   /* bleu très clair */
+  --kraft:  oklch(0.985 0.006 250); /* blanc bleuté */
+  --ink:    oklch(0.20 0.02 260);
 
   /* Bleu clair institutionnel (logo AIP) */
   --sky:      oklch(0.74 0.12 236);
@@ -83,32 +83,33 @@
   --popover-foreground: var(--ink);
   --primary: var(--forest);
   --primary-foreground: var(--kraft);
-  --secondary: oklch(0.94 0.02 140);
+  --secondary: oklch(0.94 0.02 250);
   --secondary-foreground: var(--forest);
-  --muted: oklch(0.94 0.015 140);
-  --muted-foreground: oklch(0.45 0.02 150);
+  --muted: oklch(0.94 0.015 250);
+  --muted-foreground: oklch(0.45 0.03 258);
   --accent: var(--sprout);
   --accent-foreground: var(--forest);
   --destructive: oklch(0.58 0.20 27);
   --destructive-foreground: var(--kraft);
-  --border: oklch(0.90 0.015 140);
-  --input: oklch(0.92 0.012 140);
+  --border: oklch(0.90 0.015 250);
+  --input: oklch(0.92 0.012 250);
   --ring: var(--leaf);
 }
+
 
 .dark {
   --background: var(--forest);
   --foreground: var(--kraft);
-  --card: oklch(0.28 0.04 148);
+  --card: oklch(0.28 0.09 264);
   --card-foreground: var(--kraft);
-  --popover: oklch(0.28 0.04 148);
+  --popover: oklch(0.28 0.09 264);
   --popover-foreground: var(--kraft);
   --primary: var(--sprout);
   --primary-foreground: var(--forest);
-  --secondary: oklch(0.36 0.04 148);
+  --secondary: oklch(0.36 0.09 264);
   --secondary-foreground: var(--kraft);
-  --muted: oklch(0.36 0.04 148);
-  --muted-foreground: oklch(0.75 0.04 140);
+  --muted: oklch(0.36 0.09 264);
+  --muted-foreground: oklch(0.78 0.05 245);
   --accent: var(--leaf);
   --accent-foreground: var(--kraft);
   --border: oklch(1 0 0 / 10%);
