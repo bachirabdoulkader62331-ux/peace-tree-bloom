@@ -37,6 +37,14 @@ export const en: SiteContent = {
     contact: "Contact us",
     cta: "Take the pledge",
   },
+  banner: {
+    cta: "Learn more",
+    messages: [
+      "Al'umma Ginda — the voice of the people for peace in Niger",
+      "WhatsApp chatbot, audio content and rural code quiz",
+      "Join the digital awareness campaign for social cohesion",
+    ],
+  },
   common: {
     discoverProjects: "Discover our projects",
     joinEngagement: "Join our pledge",
