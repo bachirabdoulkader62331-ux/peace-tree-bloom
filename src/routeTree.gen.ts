@@ -11,7 +11,16 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TableauDeBordRouteImport } from './routes/tableau-de-bord'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ProjetsRouteImport } from './routes/projets'
+import { Route as GalerieRouteImport } from './routes/galerie'
+import { Route as EvenementsRouteImport } from './routes/evenements'
 import { Route as EngagementRouteImport } from './routes/engagement'
+import { Route as DevenirPartenaireRouteImport } from './routes/devenir-partenaire'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ArbreDeLaPaixRouteImport } from './routes/arbre-de-la-paix'
+import { Route as AlummaGindaRouteImport } from './routes/alumma-ginda'
+import { Route as ActualitesRouteImport } from './routes/actualites'
+import { Route as AProposRouteImport } from './routes/a-propos'
 import { Route as IndexRouteImport } from './routes/index'
 
 const TableauDeBordRoute = TableauDeBordRouteImport.update({
@@ -24,9 +33,54 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjetsRoute = ProjetsRouteImport.update({
+  id: '/projets',
+  path: '/projets',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalerieRoute = GalerieRouteImport.update({
+  id: '/galerie',
+  path: '/galerie',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EvenementsRoute = EvenementsRouteImport.update({
+  id: '/evenements',
+  path: '/evenements',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EngagementRoute = EngagementRouteImport.update({
   id: '/engagement',
   path: '/engagement',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DevenirPartenaireRoute = DevenirPartenaireRouteImport.update({
+  id: '/devenir-partenaire',
+  path: '/devenir-partenaire',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArbreDeLaPaixRoute = ArbreDeLaPaixRouteImport.update({
+  id: '/arbre-de-la-paix',
+  path: '/arbre-de-la-paix',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AlummaGindaRoute = AlummaGindaRouteImport.update({
+  id: '/alumma-ginda',
+  path: '/alumma-ginda',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ActualitesRoute = ActualitesRouteImport.update({
+  id: '/actualites',
+  path: '/actualites',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AProposRoute = AProposRouteImport.update({
+  id: '/a-propos',
+  path: '/a-propos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -37,34 +91,110 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/actualites': typeof ActualitesRoute
+  '/alumma-ginda': typeof AlummaGindaRoute
+  '/arbre-de-la-paix': typeof ArbreDeLaPaixRoute
+  '/contact': typeof ContactRoute
+  '/devenir-partenaire': typeof DevenirPartenaireRoute
   '/engagement': typeof EngagementRoute
+  '/evenements': typeof EvenementsRoute
+  '/galerie': typeof GalerieRoute
+  '/projets': typeof ProjetsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tableau-de-bord': typeof TableauDeBordRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/actualites': typeof ActualitesRoute
+  '/alumma-ginda': typeof AlummaGindaRoute
+  '/arbre-de-la-paix': typeof ArbreDeLaPaixRoute
+  '/contact': typeof ContactRoute
+  '/devenir-partenaire': typeof DevenirPartenaireRoute
   '/engagement': typeof EngagementRoute
+  '/evenements': typeof EvenementsRoute
+  '/galerie': typeof GalerieRoute
+  '/projets': typeof ProjetsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tableau-de-bord': typeof TableauDeBordRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/a-propos': typeof AProposRoute
+  '/actualites': typeof ActualitesRoute
+  '/alumma-ginda': typeof AlummaGindaRoute
+  '/arbre-de-la-paix': typeof ArbreDeLaPaixRoute
+  '/contact': typeof ContactRoute
+  '/devenir-partenaire': typeof DevenirPartenaireRoute
   '/engagement': typeof EngagementRoute
+  '/evenements': typeof EvenementsRoute
+  '/galerie': typeof GalerieRoute
+  '/projets': typeof ProjetsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tableau-de-bord': typeof TableauDeBordRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/engagement' | '/sitemap.xml' | '/tableau-de-bord'
+  fullPaths:
+    | '/'
+    | '/a-propos'
+    | '/actualites'
+    | '/alumma-ginda'
+    | '/arbre-de-la-paix'
+    | '/contact'
+    | '/devenir-partenaire'
+    | '/engagement'
+    | '/evenements'
+    | '/galerie'
+    | '/projets'
+    | '/sitemap.xml'
+    | '/tableau-de-bord'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/engagement' | '/sitemap.xml' | '/tableau-de-bord'
-  id: '__root__' | '/' | '/engagement' | '/sitemap.xml' | '/tableau-de-bord'
+  to:
+    | '/'
+    | '/a-propos'
+    | '/actualites'
+    | '/alumma-ginda'
+    | '/arbre-de-la-paix'
+    | '/contact'
+    | '/devenir-partenaire'
+    | '/engagement'
+    | '/evenements'
+    | '/galerie'
+    | '/projets'
+    | '/sitemap.xml'
+    | '/tableau-de-bord'
+  id:
+    | '__root__'
+    | '/'
+    | '/a-propos'
+    | '/actualites'
+    | '/alumma-ginda'
+    | '/arbre-de-la-paix'
+    | '/contact'
+    | '/devenir-partenaire'
+    | '/engagement'
+    | '/evenements'
+    | '/galerie'
+    | '/projets'
+    | '/sitemap.xml'
+    | '/tableau-de-bord'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AProposRoute: typeof AProposRoute
+  ActualitesRoute: typeof ActualitesRoute
+  AlummaGindaRoute: typeof AlummaGindaRoute
+  ArbreDeLaPaixRoute: typeof ArbreDeLaPaixRoute
+  ContactRoute: typeof ContactRoute
+  DevenirPartenaireRoute: typeof DevenirPartenaireRoute
   EngagementRoute: typeof EngagementRoute
+  EvenementsRoute: typeof EvenementsRoute
+  GalerieRoute: typeof GalerieRoute
+  ProjetsRoute: typeof ProjetsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TableauDeBordRoute: typeof TableauDeBordRoute
 }
@@ -85,11 +215,74 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projets': {
+      id: '/projets'
+      path: '/projets'
+      fullPath: '/projets'
+      preLoaderRoute: typeof ProjetsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/galerie': {
+      id: '/galerie'
+      path: '/galerie'
+      fullPath: '/galerie'
+      preLoaderRoute: typeof GalerieRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/evenements': {
+      id: '/evenements'
+      path: '/evenements'
+      fullPath: '/evenements'
+      preLoaderRoute: typeof EvenementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/engagement': {
       id: '/engagement'
       path: '/engagement'
       fullPath: '/engagement'
       preLoaderRoute: typeof EngagementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/devenir-partenaire': {
+      id: '/devenir-partenaire'
+      path: '/devenir-partenaire'
+      fullPath: '/devenir-partenaire'
+      preLoaderRoute: typeof DevenirPartenaireRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/arbre-de-la-paix': {
+      id: '/arbre-de-la-paix'
+      path: '/arbre-de-la-paix'
+      fullPath: '/arbre-de-la-paix'
+      preLoaderRoute: typeof ArbreDeLaPaixRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/alumma-ginda': {
+      id: '/alumma-ginda'
+      path: '/alumma-ginda'
+      fullPath: '/alumma-ginda'
+      preLoaderRoute: typeof AlummaGindaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/actualites': {
+      id: '/actualites'
+      path: '/actualites'
+      fullPath: '/actualites'
+      preLoaderRoute: typeof ActualitesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/a-propos': {
+      id: '/a-propos'
+      path: '/a-propos'
+      fullPath: '/a-propos'
+      preLoaderRoute: typeof AProposRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -104,20 +297,19 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AProposRoute: AProposRoute,
+  ActualitesRoute: ActualitesRoute,
+  AlummaGindaRoute: AlummaGindaRoute,
+  ArbreDeLaPaixRoute: ArbreDeLaPaixRoute,
+  ContactRoute: ContactRoute,
+  DevenirPartenaireRoute: DevenirPartenaireRoute,
   EngagementRoute: EngagementRoute,
+  EvenementsRoute: EvenementsRoute,
+  GalerieRoute: GalerieRoute,
+  ProjetsRoute: ProjetsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TableauDeBordRoute: TableauDeBordRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
