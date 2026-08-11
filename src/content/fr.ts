@@ -36,6 +36,14 @@ export const fr = {
     contact: "Nous contacter",
     cta: "Je m'engage",
   },
+  banner: {
+    cta: "En savoir plus",
+    messages: [
+      "Al'umma Ginda — la voix de la population pour la paix au Niger",
+      "Chatbot WhatsApp, contenus audio et quiz sur le code rural",
+      "Rejoignez la sensibilisation numérique pour la cohésion sociale",
+    ],
+  },
   common: {
     discoverProjects: "Découvrir nos projets",
     joinEngagement: "Rejoindre notre engagement",

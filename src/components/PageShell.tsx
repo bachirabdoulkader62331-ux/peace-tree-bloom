@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { TopBanner } from "@/components/TopBanner";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -6,6 +7,7 @@ export function PageShell({ children }: { children: ReactNode }) {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-kraft">
       <div className="texture-kraft pointer-events-none fixed inset-0 z-50" />
+      <TopBanner />
       <SiteNav />
       <main>{children}</main>
       <SiteFooter />
