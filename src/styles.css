@@ -49,7 +49,12 @@
   --color-sprout: var(--sprout);
   --color-kraft: var(--kraft);
   --color-ink: var(--ink);
+  --color-sky: var(--sky);
+  --color-sky-soft: var(--sky-soft);
+  --color-sky-deep: var(--sky-deep);
+  --color-sky-ink: var(--sky-ink);
 }
+
 
 :root {
   --radius: 0.75rem;
@@ -61,6 +66,13 @@
   --sprout: oklch(0.79 0.08 140);   /* #a0c49d */
   --kraft:  oklch(0.985 0.012 85);  /* #fdfaf6 */
   --ink:    oklch(0.20 0.005 150);  /* #1e211f */
+
+  /* Bleu clair institutionnel (logo AIP) */
+  --sky:      oklch(0.74 0.12 236);
+  --sky-soft: oklch(0.86 0.07 234);
+  --sky-deep: oklch(0.44 0.13 245);
+  --sky-ink:  oklch(0.26 0.07 248);
+
 
   /* Semantic */
   --background: var(--kraft);
@@ -138,3 +150,19 @@
 
 @utility animate-fruit-pop { animation: fruit-pop 0.7s cubic-bezier(0.19,1,0.22,1) both; }
 @utility animate-leaf-drift { animation: leaf-drift 6s ease-in-out infinite; }
+
+@keyframes ken-burns {
+  0% { transform: scale(1.04) translate3d(0, 0, 0); }
+  100% { transform: scale(1.16) translate3d(-1.2%, -1%, 0); }
+}
+@keyframes hero-in {
+  0% { opacity: 0; transform: translateY(18px); filter: blur(4px); }
+  100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+@utility animate-ken-burns { animation: ken-burns 9s ease-out both; }
+@utility animate-hero-in { animation: hero-in 0.9s cubic-bezier(0.16,1,0.3,1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ken-burns, .animate-hero-in { animation: none !important; }
+}
