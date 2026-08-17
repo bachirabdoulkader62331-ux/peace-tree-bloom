@@ -115,7 +115,10 @@ function Home() {
                 className="h-72 w-full object-cover md:h-96"
               />
             </div>
-            <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+            <span className="mt-8 block text-[10px] font-bold uppercase tracking-[0.2em] text-forest/40">
+              {h.presentation.pillarsTitle}
+            </span>
+            <ul className="mt-4 grid gap-3 sm:grid-cols-2">
               {h.presentation.pillars.map((p) => (
                 <li
                   key={p}
@@ -125,9 +128,6 @@ function Home() {
                 </li>
               ))}
             </ul>
-            <span className="mt-4 block text-[10px] font-bold uppercase tracking-[0.2em] text-forest/40">
-              {h.presentation.pillarsTitle}
-            </span>
           </Reveal>
         </div>
       </section>
