@@ -1,7 +1,4 @@
-import heroUnity from "@/assets/hero/hero-unity.jpg";
-import heroDialogue from "@/assets/hero/hero-dialogue.jpg";
-import heroInnovation from "@/assets/hero/hero-innovation.jpg";
-import heroEngagement from "@/assets/hero/hero-engagement.jpg";
+import { photos } from "@/content/homeSections";
 
 export type HeroSlide = {
   id: string;
@@ -12,35 +9,43 @@ export type HeroSlide = {
 /** Modifier les images du Hero ici — l'ordre définit l'ordre du slider. */
 export const heroSlides: HeroSlide[] = [
   {
-    id: "unity",
-    src: heroUnity,
+    id: "group-niamey",
+    src: photos.groupNiamey,
     alt: {
-      fr: "Jeunes du Sahel unis, mains jointes au coucher du soleil",
-      en: "Young people of the Sahel united, hands joined at sunset",
+      fr: "Membres et partenaires de l'AIP réunis lors d'une rencontre à Niamey",
+      en: "AIP members and partners gathered at a meeting in Niamey",
     },
   },
   {
-    id: "dialogue",
-    src: heroDialogue,
+    id: "team-terrain",
+    src: photos.teamTerrain,
     alt: {
-      fr: "Cercle de dialogue communautaire sous un arbre au Niger",
-      en: "Community dialogue circle under a tree in Niger",
+      fr: "Équipe des Innovateurs pour la Paix et acteurs communautaires",
+      en: "The Innovators for Peace team with community actors",
     },
   },
   {
-    id: "innovation",
-    src: heroInnovation,
+    id: "atelier-numerique",
+    src: photos.atelierNumerique,
     alt: {
-      fr: "Atelier d'innovation avec de jeunes participants",
-      en: "Innovation workshop with young participants",
+      fr: "Session de travail sur les outils numériques pour la paix",
+      en: "Working session on digital tools for peace",
     },
   },
   {
-    id: "engagement",
-    src: heroEngagement,
+    id: "equipe-innovation",
+    src: photos.equipeInnovation,
     alt: {
-      fr: "Élèves et volontaires plantant un arbre ensemble",
-      en: "Students and volunteers planting a tree together",
+      fr: "Équipe d'innovateurs pour la paix après un atelier de travail",
+      en: "Team of peace innovators after a workshop",
+    },
+  },
+  {
+    id: "alumma",
+    src: photos.muryarAlumma,
+    alt: {
+      fr: "Activité du projet Muryar Al'Umma pour la paix au Niger",
+      en: "Muryar Al'Umma peace project activity in Niger",
     },
   },
 ];
