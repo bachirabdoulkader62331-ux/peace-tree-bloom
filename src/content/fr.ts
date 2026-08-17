@@ -11,10 +11,10 @@ export const fr = {
     slogan: "Ensemble, construisons une société de paix, de dialogue et d'engagement.",
     tagline: "Consolidation de la paix et droits humains à l'ère du numérique",
     address:
-      "Bureau de pilotage — 168 Avenue Muhamadou Buhari, alignement station OLA Bobiel, Niamey, Niger",
+      "Bureau exécutif — Boulevard Muhamadu Burahi, alignement Station OLA Bobiel, Niamey, Niger",
     email: "innovateurspaix@gmail.com",
-    phone: "+227 93 31 29 31",
-    whatsapp: "+22793312931",
+    phone: "+227 90 02 09 18",
+    whatsapp: "+22790020918",
     contactPerson: {
       name: "BOUKAR KANTA Mahaman Laouali",
       role: "Secrétaire Exécutif de l'AIP",

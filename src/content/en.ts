@@ -12,10 +12,10 @@ export const en: SiteContent = {
     slogan: "Together, let's build a society of peace, dialogue and engagement.",
     tagline: "Peacebuilding and human rights in the digital age",
     address:
-      "Coordination office — 168 Avenue Muhamadou Buhari, next to the OLA Bobiel station, Niamey, Niger",
+      "Executive office — Boulevard Muhamadu Burahi, next to OLA Bobiel station, Niamey, Niger",
     email: "innovateurspaix@gmail.com",
-    phone: "+227 93 31 29 31",
-    whatsapp: "+22793312931",
+    phone: "+227 90 02 09 18",
+    whatsapp: "+22790020918",
     contactPerson: {
       name: "BOUKAR KANTA Mahaman Laouali",
       role: "Executive Secretary, AIP",
