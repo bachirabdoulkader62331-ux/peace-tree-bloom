@@ -469,7 +469,7 @@ function Home() {
                 </div>
               </div>
               <img
-                src={photos.equipeInnovation}
+                src={photos.portraitEngagement}
                 alt=""
                 width={1024}
                 height={520}
