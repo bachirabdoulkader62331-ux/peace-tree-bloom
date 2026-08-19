@@ -1,14 +1,16 @@
+import { photos } from "@/content/homeSections";
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero, Section } from "@/components/PageShell";
 import { useI18n } from "@/lib/i18n";
-import alummaImg from "@/assets/alumma-ginda.jpg";
-import atelierImg from "@/assets/atelier.jpg";
-import dialogueImg from "@/assets/dialogue.jpg";
-import communityImg from "@/assets/community.jpg";
-import baobabImg from "@/assets/baobab-tree.jpg";
-import aipHero from "@/assets/aip-hero.jpg";
-import nigerMapImg from "@/assets/niger-map.jpg";
+
+const baobabImg = photos.plateformeArbre;
+const alummaImg = photos.muryarAlumma;
+const communityImg = photos.groupNiamey;
+const atelierImg = photos.atelierCartographie;
+const dialogueImg = photos.conflitsNumeriques;
+const nigerMapImg = photos.portraitParticipant;
+const aipHero = photos.teamTerrain;
 
 export const Route = createFileRoute("/galerie")({
   head: () => ({

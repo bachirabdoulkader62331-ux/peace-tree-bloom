@@ -1,7 +1,9 @@
+import { photos } from "@/content/homeSections";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageHero, Section } from "@/components/PageShell";
 import { useI18n, formatDate } from "@/lib/i18n";
-import atelierImg from "@/assets/atelier.jpg";
+
+const atelierImg = photos.atelierCartographie;
 
 export const Route = createFileRoute("/actualites")({
   head: () => ({

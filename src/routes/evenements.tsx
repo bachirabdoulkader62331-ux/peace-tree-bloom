@@ -1,7 +1,9 @@
+import { photos } from "@/content/homeSections";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero, Section } from "@/components/PageShell";
 import { useI18n, formatDate } from "@/lib/i18n";
-import dialogueImg from "@/assets/dialogue.jpg";
+
+const dialogueImg = photos.conflitsNumeriques;
 
 export const Route = createFileRoute("/evenements")({
   head: () => ({

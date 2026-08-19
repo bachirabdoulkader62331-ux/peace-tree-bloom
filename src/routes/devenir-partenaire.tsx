@@ -1,10 +1,12 @@
+import { photos } from "@/content/homeSections";
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
 import { toast } from "sonner";
 import { PageShell, PageHero, Section } from "@/components/PageShell";
 import { useI18n } from "@/lib/i18n";
-import communityImg from "@/assets/community.jpg";
+
+const communityImg = photos.groupNiamey;
 
 export const Route = createFileRoute("/devenir-partenaire")({
   head: () => ({
