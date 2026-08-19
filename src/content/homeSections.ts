@@ -28,6 +28,7 @@ export const photos = {
   conflitsNumeriques: atelierCercle.url,
   plateformeArbre: plateformeArbre.url,
   portraitParticipant: portraitParticipant.url,
+  portraitEngagement: portraitEngagement.url,
 };
 
 
