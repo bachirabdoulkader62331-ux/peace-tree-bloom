@@ -1,11 +1,13 @@
+import { photos } from "@/content/homeSections";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageHero, Section } from "@/components/PageShell";
 import { useI18n, formatDate } from "@/lib/i18n";
 import logoAlumma from "@/assets/logo-alumma-ginda.png.asset.json";
-import alummaImg from "@/assets/alumma-ginda.jpg";
-import atelierImg from "@/assets/atelier.jpg";
-import dialogueImg from "@/assets/dialogue.jpg";
-import communityImg from "@/assets/community.jpg";
+
+const alummaImg = photos.muryarAlumma;
+const communityImg = photos.groupNiamey;
+const atelierImg = photos.atelierCartographie;
+const dialogueImg = photos.conflitsNumeriques;
 
 export const Route = createFileRoute("/alumma-ginda")({
   head: () => ({

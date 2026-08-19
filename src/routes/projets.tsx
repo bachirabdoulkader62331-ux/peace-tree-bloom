@@ -1,9 +1,11 @@
+import { photos } from "@/content/homeSections";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageHero, Section } from "@/components/PageShell";
 import { useI18n } from "@/lib/i18n";
-import baobabImg from "@/assets/baobab-tree.jpg";
-import alummaImg from "@/assets/alumma-ginda.jpg";
-import communityImg from "@/assets/community.jpg";
+
+const baobabImg = photos.plateformeArbre;
+const alummaImg = photos.muryarAlumma;
+const communityImg = photos.groupNiamey;
 
 export const Route = createFileRoute("/projets")({
   head: () => ({

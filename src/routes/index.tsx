@@ -18,8 +18,9 @@ import { useI18n, formatDate } from "@/lib/i18n";
 import { useLiveStats } from "@/lib/useLiveStats";
 import { homeSections, photos, HOME_VIDEO } from "@/content/homeSections";
 
-import baobabImg from "@/assets/baobab-tree.jpg";
 import logoAlumma from "@/assets/logo-alumma-ginda.png.asset.json";
+
+const baobabImg = photos.plateformeArbre;
 
 const SITE = "https://aip-niger.lovable.app";
 

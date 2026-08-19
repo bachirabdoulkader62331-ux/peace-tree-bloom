@@ -1,11 +1,13 @@
+import { photos } from "@/content/homeSections";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, Section } from "@/components/PageShell";
 import { useI18n } from "@/lib/i18n";
 import { useLiveStats } from "@/lib/useLiveStats";
 import { FRUITS } from "@/lib/fruits";
-import baobabImg from "@/assets/baobab-tree.jpg";
-import communityImg from "@/assets/community.jpg";
-import nigerMapImg from "@/assets/niger-map.jpg";
+
+const baobabImg = photos.plateformeArbre;
+const communityImg = photos.groupNiamey;
+const nigerMapImg = photos.portraitParticipant;
 
 export const Route = createFileRoute("/arbre-de-la-paix")({
   head: () => ({

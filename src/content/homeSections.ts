@@ -5,25 +5,30 @@
  * proviennent directement du rapport.
  */
 
-import groupNiamey from "@/assets/photos/aip-group-niamey.jpg.asset.json";
-import teamTerrain from "@/assets/photos/aip-team-terrain.jpg.asset.json";
-import atelierNumerique from "@/assets/photos/aip-atelier-numerique.jpg.asset.json";
-import muryarAlumma from "@/assets/photos/aip-muryar-alumma.jpg.asset.json";
-import portraitEcoute from "@/assets/photos/aip-portrait-ecoute.jpg.asset.json";
-import equipeInnovation from "@/assets/photos/aip-equipe-innovation.png.asset.json";
-import atelierCartographie from "@/assets/photos/aip-atelier-cartographie.png.asset.json";
-import conflitsNumeriques from "@/assets/photos/aip-transformation-conflits-numeriques.png.asset.json";
+import groupeNumeriqueSahel from "@/assets/photos/aip-groupe-numerique-sahel.jpg.asset.json";
+import equipeCelebration from "@/assets/photos/aip-equipe-celebration.png.asset.json";
+import sessionNumerique from "@/assets/photos/aip-session-numerique.jpg.asset.json";
+import rencontreCommunautaire from "@/assets/photos/aip-rencontre-communautaire.jpg.asset.json";
+import portraitParticipante from "@/assets/photos/aip-portrait-participante.jpg.asset.json";
+import portraitInnovateur from "@/assets/photos/aip-portrait-innovateur.jpg.asset.json";
+import portraitParticipant from "@/assets/photos/aip-portrait-participant.jpg.asset.json";
+import atelierCartes from "@/assets/photos/aip-atelier-cartes.jpg.asset.json";
+import atelierCercle from "@/assets/photos/aip-atelier-cercle.png.asset.json";
+import plateformeArbre from "@/assets/photos/aip-plateforme-arbre-paix.jpg.asset.json";
 
 export const photos = {
-  groupNiamey: groupNiamey.url,
-  teamTerrain: teamTerrain.url,
-  atelierNumerique: atelierNumerique.url,
-  muryarAlumma: muryarAlumma.url,
-  portraitEcoute: portraitEcoute.url,
-  equipeInnovation: equipeInnovation.url,
-  atelierCartographie: atelierCartographie.url,
-  conflitsNumeriques: conflitsNumeriques.url,
+  groupNiamey: groupeNumeriqueSahel.url,
+  teamTerrain: equipeCelebration.url,
+  atelierNumerique: sessionNumerique.url,
+  muryarAlumma: rencontreCommunautaire.url,
+  portraitEcoute: portraitParticipante.url,
+  equipeInnovation: portraitInnovateur.url,
+  atelierCartographie: atelierCartes.url,
+  conflitsNumeriques: atelierCercle.url,
+  plateformeArbre: plateformeArbre.url,
+  portraitParticipant: portraitParticipant.url,
 };
+
 
 /**
  * Vidéo YouTube « Bienvenue sur Innovateurs pour la Paix ».
