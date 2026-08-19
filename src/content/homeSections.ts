@@ -15,6 +15,7 @@ import portraitParticipant from "@/assets/photos/aip-portrait-participant.jpg.as
 import atelierCartes from "@/assets/photos/aip-atelier-cartes.jpg.asset.json";
 import atelierCercle from "@/assets/photos/aip-atelier-cercle.png.asset.json";
 import plateformeArbre from "@/assets/photos/aip-plateforme-arbre-paix.jpg.asset.json";
+import portraitEngagement from "@/assets/photos/aip-portrait-engagement.jpg.asset.json";
 
 export const photos = {
   groupNiamey: groupeNumeriqueSahel.url,
